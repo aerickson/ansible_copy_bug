@@ -19,15 +19,11 @@ provisioner:
   ansible_version: latest
   ansible_verbosity: 2
   ansible_verbose: true
-  ansible_vault_password_file: "vault-password"
   extra_vars:
     env: "corp"
 
 platforms:
   - name: ubuntu-14.04
-#    driver_config:
-#      network:
-#      - ["forwarded_port", {guest: 80, host: 8099}]
 
 suites:
   - name: default
@@ -35,4 +31,3 @@ suites:
 # Fix for: https://github.com/neillturner/kitchen-ansible/issues/66
 verifier:
   ruby_bindir: '/usr/bin'
-
