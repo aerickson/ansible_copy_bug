@@ -1,4 +1,3 @@
-#
 ---
 driver:
   ## vagrant
@@ -27,6 +26,12 @@ platforms:
 
 suites:
   - name: default
+    provisioner:
+      require_ansible_repo: false
+      require_ansible_source: true
+      ansible_source_url: 'git@github.com:aerickson/ansible.git'
+      # playbook: test/integration/default/default.yml
+
 
 # Fix for: https://github.com/neillturner/kitchen-ansible/issues/66
 verifier:
