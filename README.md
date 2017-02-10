@@ -1,3 +1,10 @@
+# Overview
+
+The copy module fails to overwrite a hard-linked file.
+
+See https://github.com/ansible/ansible/issues/10834.
+
+# Details
 
 ```
        PLAYBOOK: default.yml **********************************************************
@@ -25,3 +32,5 @@
        PLAY RECAP *********************************************************************
        localhost                  : ok=3    changed=2    unreachable=0    failed=1   
 ```
+
+
