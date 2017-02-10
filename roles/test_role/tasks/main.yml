@@ -3,13 +3,9 @@
 # always works as it's never hard linked
 - name: copy file
   copy: src="test_file" dest=/etc/test_file_noprob owner=root group=root mode=644
-  tags:
-    - system
 
 - name: copy file
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
-  tags:
-    - system
 
 # simulates nomad starting an app with the isolated exec driver and hardlinking the test file
 - name: make hard link
@@ -20,5 +16,3 @@
 
 - name: copy file 2
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
-  tags:
-    - system
