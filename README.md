@@ -4,6 +4,13 @@ The copy module fails to overwrite a hard-linked file.
 
 See https://github.com/ansible/ansible/issues/10834.
 
+# Running
+
+```
+bundle install
+./run_test.sh
+```
+
 # Details
 
 ```
