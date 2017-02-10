@@ -7,6 +7,7 @@ GIT
       test-kitchen (~> 1.4)
 
 GEM
+  remote: https://rubygems.org/
   specs:
     artifactory (2.5.1)
     kitchen-docker (2.6.0)
