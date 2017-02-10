@@ -6,10 +6,11 @@
   tags:
     - system
 
-# TODO: make hard link
+# simulates nomad starting an app with the isolated exec driver and hardlinking the test file
 - name: make hard link
   file:
-    path: /etc/test_file
+    src: /etc/test_file
+    dest: /etc/test_file_hardlink
     state: hard
 
 - name: copy file 2
