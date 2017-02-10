@@ -1,9 +1,14 @@
+GIT
+  remote: https://github.com/aerickson/kitchen-ansible
+  revision: 5f68e8304f91a40629a4d5a55da069f791d081e7
+  specs:
+    kitchen-ansible (0.45.8)
+      net-ssh (~> 3)
+      test-kitchen (~> 1.4)
+
 GEM
   specs:
     artifactory (2.5.1)
-    kitchen-ansible (0.45.8)
-      net-ssh (~> 3.0)
-      test-kitchen (~> 1.4)
     kitchen-docker (2.6.0)
       test-kitchen (>= 1.0.0)
     mixlib-install (2.1.9)
@@ -33,7 +38,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  kitchen-ansible
+  kitchen-ansible!
   kitchen-docker
   test-kitchen
 

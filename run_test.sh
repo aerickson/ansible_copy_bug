@@ -2,4 +2,4 @@
 
 set -e
 
-kitchen converge
+bundle exec kitchen converge
