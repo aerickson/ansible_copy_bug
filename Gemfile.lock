@@ -7,6 +7,8 @@ GEM
       test-kitchen (~> 1.4)
     kitchen-docker (2.6.0)
       test-kitchen (>= 1.0.0)
+    kitchen-vagrant (1.0.2)
+      test-kitchen (~> 1.4)
     mixlib-install (2.1.12)
       artifactory
       mixlib-shellout
@@ -36,6 +38,7 @@ PLATFORMS
 DEPENDENCIES
   kitchen-ansible
   kitchen-docker
+  kitchen-vagrant
   test-kitchen
 
 BUNDLED WITH
