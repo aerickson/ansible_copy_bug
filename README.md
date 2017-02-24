@@ -13,6 +13,10 @@ bundle install
 
 # Details
 
+full `ansible -vvv` output at https://gist.github.com/aerickson/ffd8bc846d90d32b05de7c6c05f05a96
+
+summary:
+
 ```
        PLAY [all] *********************************************************************
        
