@@ -1,14 +1,14 @@
 ---
 driver:
   ## vagrant
-  #  name: vagrant
+  name: vagrant
   ## docker
   # from http://www.tddfellow.com/blog/2015/08/05/running-kitchen-docker-tests-with-upstart/
-  name: docker
-  use_sudo: false
-  disable_upstart: false
-  image: ubuntu-upstart:14.04
-  run_command: /sbin/init
+  # name: docker
+  # use_sudo: false
+  # disable_upstart: false
+  # image: ubuntu-upstart:14.04
+  # run_command: /sbin/init
 
 provisioner:
   hosts: test-kitchen
