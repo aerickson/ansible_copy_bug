@@ -16,7 +16,9 @@ provisioner:
   require_chef_for_busser: false
   require_ruby_for_busser: true
   ansible_version: latest
-  ansible_verbosity: 2
+  # https://github.com/neillturner/kitchen-ansible/blob/master/provisioner_options.md
+  # 2 is warn, 3 is debug
+  ansible_verbosity: 3
   ansible_verbose: true
   extra_vars:
     env: "corp"
