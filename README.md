@@ -13,9 +13,14 @@ bundle install
 
 # Details
 
-full `ansible -vvv` output at https://gist.github.com/aerickson/ffd8bc846d90d32b05de7c6c05f05a96
+## full output
 
-summary:
+full `ansible -vvv` output from this test kitchen image is at https://gist.github.com/aerickson/ffd8bc846d90d32b05de7c6c05f05a96.
+
+full `ansible -vvv` output from a non-test-kitchen system is at: 
+https://gist.github.com/aerickson/7318cf031b387ac4dca0f2ca3e1e48d6.
+
+## summary:
 
 ```
        PLAY [all] *********************************************************************
