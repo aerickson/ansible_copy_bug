@@ -39,7 +39,7 @@ https://gist.github.com/aerickson/7318cf031b387ac4dca0f2ca3e1e48d6.
 ### summary
 
 ```
-       fatal: [localhost]: FAILED! => {"changed": false, "checksum": "bf00f4e07eb95378ff17a8e57378ddd0fee802df", "failed": true, "msg": "absolute paths are required"}
+fatal: [localhost]: FAILED! => {"changed": false, "checksum": "bf00f4e07eb95378ff17a8e57378ddd0fee802df", "failed": true, "msg": "absolute paths are required"}
 ```
 
 
