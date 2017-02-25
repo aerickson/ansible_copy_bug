@@ -11,6 +11,11 @@ bundle install
 ./run_test.sh
 ```
 
+# Relevant Ansible Code
+
+https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L380
+https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L249
+
 # Details
 
 ## full output
