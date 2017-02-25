@@ -30,7 +30,7 @@ full `ansible -vvv` output from this test kitchen image is at https://gist.githu
 full `ansible -vvv` output from a non-test-kitchen system (including playbook snippet) is at: 
 https://gist.github.com/aerickson/7318cf031b387ac4dca0f2ca3e1e48d6.
 
-## 'file' bug summary:
+### summary:
 
 ```
        PLAY [all] *********************************************************************
