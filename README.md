@@ -13,8 +13,8 @@ bundle install
 
 # Relevant Ansible Code
 
-https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L380
-https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L249
+for 'file' calls involving hard links: https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L380
+for 'template' calls involving hard links: https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L249
 
 # Details
 
