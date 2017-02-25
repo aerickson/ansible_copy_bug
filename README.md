@@ -26,7 +26,7 @@ https://gist.github.com/aerickson/6cf9b52e3c70fa3c90f89206f1567699.
 ### summary
 
 ```
-fatal: [10.1.0.115]: FAILED! => {"changed": false, "checksum": "dceaaa286a40cf63011b0987438599f565c52e34", "failed": true, "msg": "absolute paths are required"}
+fatal: [10.1.0.115]: FAILED! => {"changed": false, "failed": true, "msg": "src and dest are required for creating links"}
 ```
 
 ## 'file' bug
