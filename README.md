@@ -18,14 +18,19 @@ for 'template' calls involving hard links: https://github.com/ansible/ansible/bl
 
 # Details
 
-## full output
+## 'template' bug full output
+
+full `ansible -vvv` output from a non-test-kitchen system (including playbook snippet) is at: 
+https://gist.github.com/aerickson/6cf9b52e3c70fa3c90f89206f1567699.
+
+## 'file' bug full output
 
 full `ansible -vvv` output from this test kitchen image is at https://gist.github.com/aerickson/ffd8bc846d90d32b05de7c6c05f05a96.
 
 full `ansible -vvv` output from a non-test-kitchen system (including playbook snippet) is at: 
 https://gist.github.com/aerickson/7318cf031b387ac4dca0f2ca3e1e48d6.
 
-## summary:
+## 'file' bug summary:
 
 ```
        PLAY [all] *********************************************************************
