@@ -1,6 +1,6 @@
 # Overview
 
-The file and template modules fail to overwrite a hard-linked file.
+The file and template modules fail to overwrite hard-linked files.
 
 See https://github.com/ansible/ansible/issues/10834.
 
