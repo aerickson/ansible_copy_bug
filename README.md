@@ -18,46 +18,28 @@ for 'template' calls involving hard links: https://github.com/ansible/ansible/bl
 
 # Details
 
-## 'template' bug full output
+## 'template' bug
 
 full `ansible -vvv` output from a non-test-kitchen system (including playbook snippet) is at: 
 https://gist.github.com/aerickson/6cf9b52e3c70fa3c90f89206f1567699.
 
-## 'file' bug full output
+### summary
+
+```
+fatal: [10.1.0.115]: FAILED! => {"changed": false, "checksum": "dceaaa286a40cf63011b0987438599f565c52e34", "failed": true, "msg": "absolute paths are required"}
+```
+
+## 'file' bug
 
 full `ansible -vvv` output from this test kitchen image is at https://gist.github.com/aerickson/ffd8bc846d90d32b05de7c6c05f05a96.
 
 full `ansible -vvv` output from a non-test-kitchen system (including playbook snippet) is at: 
 https://gist.github.com/aerickson/7318cf031b387ac4dca0f2ca3e1e48d6.
 
-### summary:
+### summary
 
 ```
-       PLAY [all] *********************************************************************
-       
-       TASK [Gathering Facts] *********************************************************
-       ok: [localhost]
-       META: ran handlers
-       
-       TASK [test_role : copy file] ***************************************************
-       task path: /tmp/kitchen/roles/test_role/tasks/main.yml:4
-       changed: [localhost] => {"changed": true, "checksum": "bf00f4e07eb95378ff17a8e57378ddd0fee802df", "dest": "/etc/test_file_noprob", "gid": 0, "group": "root", "md5sum": "520f4377cb856716c50a96615a312459", "mode": "0644", "owner": "root", "size": 20, "src": "/home/kitchen/.ansible/tmp/ansible-tmp-1486713651.35-152308596723080/source", "state": "file", "uid": 0}
-       
-       TASK [test_role : copy file] ***************************************************
-       task path: /tmp/kitchen/roles/test_role/tasks/main.yml:7
-       changed: [localhost] => {"changed": true, "checksum": "bf00f4e07eb95378ff17a8e57378ddd0fee802df", "dest": "/etc/test_file", "gid": 0, "group": "root", "md5sum": "520f4377cb856716c50a96615a312459", "mode": "0644", "owner": "root", "size": 20, "src": "/home/kitchen/.ansible/tmp/ansible-tmp-1486713651.67-50026778395887/source", "state": "file", "uid": 0}
-       
-       TASK [test_role : make hard link] **********************************************
-       task path: /tmp/kitchen/roles/test_role/tasks/main.yml:11
-       changed: [localhost] => {"changed": true, "dest": "/etc/test_file_hardlink", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "size": 20, "src": "/etc/test_file", "state": "hard", "uid": 0}
-       
-       TASK [test_role : copy file 2] *************************************************
-       task path: /tmp/kitchen/roles/test_role/tasks/main.yml:17
        fatal: [localhost]: FAILED! => {"changed": false, "checksum": "bf00f4e07eb95378ff17a8e57378ddd0fee802df", "failed": true, "msg": "absolute paths are required"}
-       	to retry, use: --limit @/tmp/kitchen/default.retry
-       
-       PLAY RECAP *********************************************************************
-       localhost                  : ok=4    changed=3    unreachable=0    failed=1   
 ```
 
 
