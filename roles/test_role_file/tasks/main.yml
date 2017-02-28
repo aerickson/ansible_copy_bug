@@ -7,16 +7,13 @@
 - name: copy file
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
 
-# simulates nomad starting an app with the isolated exec driver and hardlinking the test file
+# simulates an app creating a chroot via hard linking
+# - in my env, nomad starting an app with the isolated exec driver and hardlinking /etc files
 - name: make hard link
   file:
     src: /etc/test_file
     dest: /etc/test_file_hardlink
     state: hard
-    force: yes
 
 - name: demonstrate file/copy bug
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
-
-# - name: demonstrate template bug
-#   template: src=test_file.j2 dest=/etc/test_file owner=root group=root mode=644
