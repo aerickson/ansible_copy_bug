@@ -1,0 +1,18 @@
+
+## ```
+##  First run is OK : two tasks appeared as changed & ok.
+##  Second run is KO : the first task fails with the following error
+## ```
+##
+## from https://github.com/ansible/ansible/issues/10834#issuecomment-164551605
+
+#repro.yaml
+- name: create file from template
+  template: src=example.txt.j2
+            dest=/tmp/example.txt
+
+- name: create hardlink
+  file: state=hard
+        src=/tmp/example.txt
+        dest=/tmp/example_hardlink.txt
+        force=yes
