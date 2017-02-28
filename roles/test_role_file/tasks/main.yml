@@ -7,12 +7,6 @@
 - name: copy file 2
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
 
-- name: make symlink (should always work)
-  file:
-    src: /etc/test_file
-    dest: /etc/test_file_symlink
-    state: link
-
 # simulates an app creating a chroot via hard linking
 # - in my env, nomad starting an app with the isolated exec driver and hardlinking /etc files
 - name: make hard link
@@ -23,3 +17,13 @@
 
 - name: demonstrate file/copy bug
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
+
+####
+#### actions to test that my fixes aren't breaking other things
+####
+
+- name: make symlink (should always work)
+  file:
+    src: /etc/test_file
+    dest: /etc/test_file_symlink
+    state: link
