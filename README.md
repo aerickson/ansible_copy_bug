@@ -9,6 +9,8 @@ This repo demonstrates the file module issue. Gists are provided for the templat
 # Running
 
 ```
+# have a working ruby
+gem install bundler
 bundle install
 ./run_test.sh
 ```
