@@ -13,6 +13,10 @@
     src: /etc/test_file
     dest: /etc/test_file_hardlink
     state: hard
+    force: yes
 
-- name: copy file 2
+- name: demonstrate file/copy bug
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
+
+# - name: demonstrate template bug
+#   template: src=test_file.j2 dest=/etc/test_file owner=root group=root mode=644
