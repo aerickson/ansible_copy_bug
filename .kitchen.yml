@@ -32,8 +32,10 @@ suites:
       require_ansible_repo: false
       require_ansible_source: true
       #ansible_source_url: 'git://github.com/aerickson/ansible.git'
+      #ansible_source_rev: hard_links_are_just_files
   - name: template_example
     provisioner:
       require_ansible_repo: false
       require_ansible_source: true
       #ansible_source_url: 'git://github.com/aerickson/ansible.git'
+      #ansible_source_rev: hard_links_are_just_files
