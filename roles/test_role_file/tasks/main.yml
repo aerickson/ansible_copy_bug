@@ -4,7 +4,7 @@
 - name: copy file
   copy: src=test_file dest=/etc/test_file_noprob owner=root group=root mode=644
 
-- name: copy file 2
+- name: copy test file to system
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
 
 # simulates an app creating a chroot via hard linking
@@ -15,15 +15,22 @@
     dest: /etc/test_file_hardlink
     state: hard
 
-- name: demonstrate file/copy bug
+# demonstrate file/copy bug
+- name: replace hard-linked file
   copy: src=test_file dest=/etc/test_file owner=root group=root mode=644
 
 ####
 #### actions to test that my fixes aren't breaking other things
 ####
 
-- name: make symlink (should always work)
+- name: make symlink
   file:
     src: /etc/test_file
+    dest: /etc/test_file_symlink
+    state: link
+
+- name: change symlink
+  file:
+    src: /etc/test_file_noprob
     dest: /etc/test_file_symlink
     state: link
