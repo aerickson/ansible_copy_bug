@@ -15,4 +15,3 @@
   file: state=hard
         src=/tmp/example.txt
         dest=/tmp/example_hardlink.txt
-        force=yes
