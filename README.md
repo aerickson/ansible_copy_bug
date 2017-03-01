@@ -1,10 +1,10 @@
 # Overview
 
-The file and template modules fail to overwrite hard-linked files.
+The copy and template modules fail to overwrite hard-linked files.
 
 See https://github.com/ansible/ansible/issues/10834.
 
-This repo demonstrates the file module issue. Gists are provided for the template issue.
+This repo demonstrates both issues.
 
 # Running
 
@@ -14,6 +14,8 @@ gem install bundler
 bundle install
 ./run_test.sh
 ```
+
+To reproduce the template bug, comment out the copy action and uncomment the template action.
 
 # Details
 
@@ -30,7 +32,7 @@ https://gist.github.com/aerickson/6cf9b52e3c70fa3c90f89206f1567699.
 fatal: [10.1.0.115]: FAILED! => {"changed": false, "failed": true, "msg": "src and dest are required for creating links"}
 ```
 
-## 'file' bug
+## 'copy' bug
 
 relevant ansible code: https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/files/file.py#L380
 
